@@ -2,10 +2,11 @@ pipeline {
     agent any
     stages {
         stage('Checkout') {
-            steps {
-                git 'https://github.com/karanhanda07/comp367-ci-pipeline.git'
-            }
-        }
+    steps {
+        git branch: 'main', url: 'https://github.com/karanhanda07/comp367-ci-pipeline.git'
+    }
+}
+
         stage('Build') {
             steps {
                 echo 'Building the project...'
